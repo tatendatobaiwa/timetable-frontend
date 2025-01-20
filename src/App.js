@@ -8,7 +8,7 @@ import TermsOfUse from './pages/TermsOfUse/TermsOfUse';
 import Settings from './pages/Settings/Settings';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ExamTimetable from './pages/ExamTimetable/ExamTimetable';
-import TeachingTimetable from './pages/TeachingTimetable/TeaachingTimetable';
+import TeachingTimetable from './pages/TeachingTimetable/TeachingTimetable';
 
 
 import './App.css';
