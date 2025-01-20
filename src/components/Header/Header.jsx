@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import darkmodelogo from '../../assets/darkmodelogo.png';
-import settingslogo from '../../assets/settingslogo.png';
-import minilogo from '../../assets/schedulemasterminilogo.png';
+import darkmodelogo from '../../assets/darkmodelogo.webp';
+import settingslogo from '../../assets/settingslogo.webp';
+import minilogo from '../../assets/schedulemasterminilogo.webp';
 
 import './Header.css';
-
 const Header = () => {
   const [isMenuActive, setMenuActive] = useState(false);
   const navigate = useNavigate();

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mailIcon from "../../assets/mail.png";
-import phoneIcon from "../../assets/call.png";
-import linkedinIcon from "../../assets/linkedin.png";
-import biclogo from "../../assets/biclogo.png";
+import mailIcon from "../../assets/mail.webp";
+import phoneIcon from "../../assets/call.webp";
+import linkedinIcon from "../../assets/linkedin.webp";
+import biclogo from "../../assets/biclogo.webp";
 import './Footer.css';
 
 const Footer = () => {

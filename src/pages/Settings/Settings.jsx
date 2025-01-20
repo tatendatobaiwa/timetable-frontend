@@ -11,12 +11,12 @@ const Settings = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    document.body.style.backgroundColor = isDarkMode ? '#fff' : '#030303'; // Adjust body bg color
+    document.body.style.backgroundColor = isDarkMode ? '#fff' : '#030303'; 
   };
 
   const handleLanguageChange = (e) => {
     setLanguage(e.target.value);
-    // Optionally, add logic to switch app content based on language
+    
   };
 
   return (

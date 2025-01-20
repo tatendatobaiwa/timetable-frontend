@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import rightarrow from "../../assets/right-arrow.png";
-import backgroundImage from '../../assets/output-onlinepngtools.png';
+import rightarrow from "../../assets/right-arrow.webp";
+import backgroundImage from '../../assets/output-onlinepngtools.webp';
 import './Home.css'; 
 
 const Home = () => {
