@@ -1,138 +1,138 @@
 .teaching-timetable-container {
-    font-family: Poppins, sans-serif;
-    background-color: #030303;
-    color: white;
-    padding: 2rem;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .teaching-timetable-card {
-    background-color: #1a1a1a;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    max-width: 960px;
-    width: 100%;
-  }
-  
-  .teaching-timetable-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .modules-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .module-item {
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    position: relative;
-  }
-  
+  font-family: Poppins, sans-serif;
+  background-color: #030303;
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teaching-timetable-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  max-width: 960px;
+  width: 100%;
+}
+
+.teaching-timetable-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.module-item {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
   .module-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (min-width: 768px) {
-    .module-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .input-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  
-  .input-field {
-    width: 100%;
-    background-color: #3a3a3a;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    border: none;
-  }
-  
-  .input-field:focus {
-    outline: 2px solid #4a4a4a;
-  }
-  
-  .error-message {
-    color: #ef4444;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-  }
-  
-  .remove-button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background: none;
-    border: none;
-    color: #9ca3af;
-    cursor: pointer;
-    padding: 0.25rem;
-  }
-  
-  .remove-button:hover {
-    color: #ef4444;
-  }
-  
-  .add-module-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: #2a2a2a;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .add-module-button:hover {
-    background-color: #3a3a3a;
-  }
-  
-  .generate-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: #10b981;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 2rem;
-  }
-  
-  .generate-button:hover {
-    background-color: #059669;
-  }
-  
-  .button-icon {
-    margin-right: 0.5rem;
-  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  background-color: #3a3a3a;
+  color: white;
+  padding: 0.5rem 0.25rem;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+.input-field:focus {
+  outline: 2px solid #4a4a4a;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.remove-button:hover {
+  color: #ef4444;
+}
+
+.add-module-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #f4bc2a;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-module-button:hover {
+  background-color: #3a3a3a;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.generate-button:hover {
+  background-color: #059669;
+}
+
+.button-icon {
+  margin-right: 0.5rem;
+}
