@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Plus, X, Calendar } from 'lucide-react';
-import './TeachingTimetable.css';
+import React, { useState } from "react";
+import { Plus, X, Calendar } from "lucide-react";
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import "./TeachingTimetable.css";
 
 const TeachingTimetable = () => {
-  const [modules, setModules] = useState([{ code: '', name: '' }]);
-  const [errors, setErrors] = useState([{ code: '', name: '' }]);
+  const [modules, setModules] = useState([{ code: "", name: "" }]);
+  const [errors, setErrors] = useState([{ code: "", name: "" }]);
 
   const validateModuleCode = (code) => {
     const regex = /^[A-Z]{4}\s\d{3}$/;
@@ -17,22 +19,22 @@ const TeachingTimetable = () => {
     setModules(newModules);
 
     // Validate module code
-    if (field === 'code') {
+    if (field === "code") {
       const newErrors = [...errors];
       if (!value) {
-        newErrors[index].code = 'Module code is required';
+        newErrors[index].code = "Module code is required";
       } else if (!validateModuleCode(value)) {
         newErrors[index].code = 'Module code must be in format "COMP 101"';
       } else {
-        newErrors[index].code = '';
+        newErrors[index].code = "";
       }
       setErrors(newErrors);
     }
   };
 
   const addModule = () => {
-    setModules([...modules, { code: '', name: '' }]);
-    setErrors([...errors, { code: '', name: '' }]);
+    setModules([...modules, { code: "", name: "" }]);
+    setErrors([...errors, { code: "", name: "" }]);
   };
 
   const removeModule = (index) => {
@@ -49,40 +51,53 @@ const TeachingTimetable = () => {
     const hasErrors = modules.some((module, index) => {
       const newErrors = [...errors];
       if (!module.code) {
-        newErrors[index].code = 'Module code is required';
+        newErrors[index].code = "Module code is required";
       } else if (!validateModuleCode(module.code)) {
         newErrors[index].code = 'Module code must be in format "COMP 101"';
       }
       if (!module.name) {
-        newErrors[index].name = 'Module name is required';
+        newErrors[index].name = "Module name is required";
       }
       setErrors(newErrors);
       return !validateModuleCode(module.code) || !module.name;
     });
 
     if (!hasErrors) {
-      console.log('Generating timetable for modules:', modules);
+      console.log("Generating timetable for modules:", modules);
       // Future implementation: Handle timetable generation
     }
   };
 
   return (
     <div className="teaching-timetable-container">
+      {/* Background blobs */}
+      <div className="backgrounds-blobs">
+        <img src={blob1} alt="Decorative blob 1" className="blob blob-1" />
+        <img src={blob2} alt="Decorative blob 2" className="blob blob-2" />
+        <img src={blob1} alt="Decorative blob 3" className="blob blob-3" />
+        <img src={blob2} alt="Decorative blob 4" className="blob blob-4" />
+      </div>
+
+      {/* Teaching Timetable Card */}
       <div className="teaching-timetable-card">
         <h1 className="teaching-timetable-title">Teaching Timetable</h1>
-        
+
         <div className="modules-container">
           {modules.map((module, index) => (
             <div key={index} className="module-item">
               <div className="module-grid">
                 <div className="input-group">
-                  <label className="input-label">
-                    Module Code
-                  </label>
+                  <label className="input-label">Module Code</label>
                   <input
                     type="text"
                     value={module.code}
-                    onChange={(e) => handleModuleChange(index, 'code', e.target.value.toUpperCase())}
+                    onChange={(e) =>
+                      handleModuleChange(
+                        index,
+                        "code",
+                        e.target.value.toUpperCase()
+                      )
+                    }
                     placeholder="COMP 101"
                     className="input-field"
                   />
@@ -90,15 +105,15 @@ const TeachingTimetable = () => {
                     <p className="error-message">{errors[index].code}</p>
                   )}
                 </div>
-                
+
                 <div className="input-group">
-                  <label className="input-label">
-                    Module Name
-                  </label>
+                  <label className="input-label">Module Name</label>
                   <input
                     type="text"
                     value={module.name}
-                    onChange={(e) => handleModuleChange(index, 'name', e.target.value)}
+                    onChange={(e) =>
+                      handleModuleChange(index, "name", e.target.value)
+                    }
                     placeholder="Introduction to Computing"
                     className="input-field"
                   />
@@ -107,7 +122,7 @@ const TeachingTimetable = () => {
                   )}
                 </div>
               </div>
-              
+
               {modules.length > 1 && (
                 <button
                   onClick={() => removeModule(index)}
@@ -118,19 +133,13 @@ const TeachingTimetable = () => {
               )}
             </div>
           ))}
-          
-          <button
-            onClick={addModule}
-            className="add-module-button"
-          >
+
+          <button onClick={addModule} className="add-module-button">
             <Plus size={20} className="button-icon" />
             Add Module
           </button>
-          
-          <button
-            onClick={handleGenerateTimetable}
-            className="generate-button"
-          >
+
+          <button onClick={handleGenerateTimetable} className="generate-button">
             <Calendar size={20} className="button-icon" />
             Generate Timetable
           </button>
