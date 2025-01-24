@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar, BookOpen } from "lucide-react";
-import blob1 from "../../assets/blob1.png"; // Import blob1
-import blob2 from "../../assets/blob2.png"; // Import blob2
-import "./TimetableMaker.css"; // Importing the CSS file
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import "./TimetableMaker.css";
 
 const TimetableMaker = () => {
   const navigate = useNavigate();

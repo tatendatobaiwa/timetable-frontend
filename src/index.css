@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -178,4 +184,10 @@ footer {
   h1 {
     font-size: 2rem;
   }
+}
+
+/* For RTL languages like Arabic */
+[dir="rtl"] .settings-container {
+  direction: rtl;
+  text-align: right;
 }

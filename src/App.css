@@ -1,0 +1,5 @@
+/* For RTL languages like Arabic */
+[dir="rtl"] .settings-container {
+  direction: rtl;
+  text-align: right;
+}

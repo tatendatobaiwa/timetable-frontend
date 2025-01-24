@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiCalendar, FiSettings, FiList } from "react-icons/fi";
-import rightarrow from "../../assets/right-arrow.webp";
-import blob1 from "../../assets/blob1.png"; // Import blob1
-import blob2 from "../../assets/blob2.png"; // Import blob2
-import scheduleMasterLogo from "../../assets/schedulemasterlogo.png"; // Import logo
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import scheduleMasterLogo from "../../assets/schedulemasterlogo.png";
 import "./Home.css";
 
 const Home = () => {

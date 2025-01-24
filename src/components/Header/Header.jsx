@@ -64,15 +64,8 @@ const Header = () => {
                 </a>
               </li>
               <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
-                <a href="/settings">
-                  <img
-                    src={settingslogo}
-                    alt="Settings-Icon"
-                    className="settings-icon"
-                    height="35"
-                    width="35"
-                  />
-                  <span>Settings</span>
+                <a href="/about-us">
+                  <span>About Us</span>
                 </a>
               </li>
             </ul>
