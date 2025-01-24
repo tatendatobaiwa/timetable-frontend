@@ -8,6 +8,9 @@ import {
   FiMail,
 } from "react-icons/fi";
 import rightarrow from "../../assets/right-arrow.webp";
+import blob1 from "../../assets/blob1.png"; // Import blob1
+import blob2 from "../../assets/blob2.png"; // Import blob2
+import scheduleMasterLogo from "../../assets/schedulemasterlogo.png"; // Import logo
 import "./Home.css";
 
 const Home = () => {
@@ -35,22 +38,22 @@ const Home = () => {
       {/* Background blobs */}
       <div className="backgrounds-blobs">
         <img
-          src="../../assets/blob1.png"
+          src={blob1} // Use imported blob1
           alt="Decorative blob 1"
           className="blob blob-1"
         />
         <img
-          src="../../assets/blob2.png"
+          src={blob2} // Use imported blob2
           alt="Decorative blob 2"
           className="blob blob-2"
         />
         <img
-          src="../../assets/blob1.png"
+          src={blob1} // Use imported blob1
           alt="Decorative blob 3"
           className="blob blob-3"
         />
         <img
-          src="../../assets/blob2.png"
+          src={blob2} // Use imported blob2
           alt="Decorative blob 4"
           className="blob blob-4"
         />
@@ -59,18 +62,14 @@ const Home = () => {
       {/* Logo Placeholder */}
       <div className="logo-container">
         <img
-          src="../../assets/schedulemasterlogo.png"
+          src={scheduleMasterLogo} // Use imported logo
           alt="Schedulemaster Logo"
-          className="logo"
+          className="logoh"
         />
       </div>
 
       {/* Hero Section */}
       <div className={`hero-section ${animate ? "fade-in" : "pre-animate"}`}>
-        <h1>Streamline your schedule.</h1>
-        <p>
-          Effortlessly create, customize, and manage your perfect timetable.
-        </p>
         <button
           className={`button ${animate ? "fade-in-delayed" : "pre-animate"}`}
           onClick={handleGetStartedClick}
