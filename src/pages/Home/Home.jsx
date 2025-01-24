@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  FiAlertTriangle,
-  FiMessageSquare,
-  FiList,
-  FiHelpCircle,
-  FiMail,
-} from "react-icons/fi";
+import { FiCalendar, FiSettings, FiList } from "react-icons/fi";
 import rightarrow from "../../assets/right-arrow.webp";
 import blob1 from "../../assets/blob1.png"; // Import blob1
 import blob2 from "../../assets/blob2.png"; // Import blob2
@@ -82,27 +76,29 @@ const Home = () => {
       <div className="quick-links">
         <div
           className="link-card"
-          onClick={() => console.log("Navigate to Report Fault")}
-        >
-          <FiAlertTriangle className="link-icon" />
-          <h3>Report a Fault</h3>
-          <p>Submit a new maintenance request.</p>
-        </div>
-        <div
-          className="link-card"
-          onClick={() => console.log("Navigate to Fault Status")}
+          onClick={() => navigate("/select-modules")} // Navigate to module selection
         >
           <FiList className="link-icon" />
-          <h3>View Fault Status</h3>
-          <p>Track the progress of your requests.</p>
+          <h3>Select Modules</h3>
+          <p>
+            Choose the modules you're enrolled in to generate your timetable.
+          </p>
         </div>
         <div
           className="link-card"
-          onClick={() => console.log("Navigate to Chat")}
+          onClick={() => navigate("/view-timetable")} // Navigate to view timetable
         >
-          <FiMessageSquare className="link-icon" />
-          <h3>Chat with Maintenance</h3>
-          <p>Communicate directly with the maintenance team.</p>
+          <FiCalendar className="link-icon" />
+          <h3>View Timetable</h3>
+          <p>See your personalized timetable based on your selected modules.</p>
+        </div>
+        <div
+          className="link-card"
+          onClick={() => navigate("/manage-schedule")} // Navigate to manage schedule
+        >
+          <FiSettings className="link-icon" />
+          <h3>Manage Schedule</h3>
+          <p>Customize and adjust your timetable to fit your preferences.</p>
         </div>
       </div>
     </div>
