@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
 import "./TermsOfUse.css";
 
 const TermsOfUse = () => {
@@ -8,6 +10,13 @@ const TermsOfUse = () => {
 
   return (
     <div className="terms-of-use-container">
+      {/* Background blobs */}
+      <div className="backgrounds-blobs">
+        <img src={blob1} alt="Decorative blob 1" className="blob blob-1" />
+        <img src={blob2} alt="Decorative blob 2" className="blob blob-2" />
+        <img src={blob1} alt="Decorative blob 3" className="blob blob-3" />
+        <img src={blob2} alt="Decorative blob 4" className="blob blob-4" />
+      </div>
       <div className="terms-of-use-content">
         <h1>Terms of Use</h1>
 
@@ -17,7 +26,7 @@ const TermsOfUse = () => {
           please do not use the Service.
         </p>
 
-        <h2>1. Acceptance of Terms</h2>
+        <h2>Acceptance of Terms</h2>
         <p>
           By accessing or using the Service, you confirm that you accept these
           Terms of Use. If you are using the Service on behalf of an
@@ -25,14 +34,14 @@ const TermsOfUse = () => {
           organization to these Terms.
         </p>
 
-        <h2>2. Eligibility</h2>
+        <h2>Eligibility</h2>
         <p>
           You must be at least 16 years old or the age of majority in your
           jurisdiction to use this Service. By using Schedule Master, you
           confirm that you meet this eligibility requirement.
         </p>
 
-        <h2>3. User Responsibilities</h2>
+        <h2>User Responsibilities</h2>
         <p>
           You agree to use the Service only for lawful purposes. You will not:
         </p>
@@ -45,7 +54,7 @@ const TermsOfUse = () => {
           </li>
         </ul>
 
-        <h2>4. Description of the Service</h2>
+        <h2>Description of the Service</h2>
         <p>
           Schedule Master is a tool that allows users to input their modules and
           generate a personalized timetable. The Service is entirely free to use
@@ -54,7 +63,7 @@ const TermsOfUse = () => {
           Service at any time.
         </p>
 
-        <h2>5. Privacy and Data Collection</h2>
+        <h2>Privacy and Data Collection</h2>
         <p>
           Your use of Schedule Master is governed by our{" "}
           <strong>Privacy Policy</strong>. By using the Service, you consent to
@@ -62,7 +71,7 @@ const TermsOfUse = () => {
           Policy.
         </p>
 
-        <h2>6. Prohibited Uses</h2>
+        <h2>Prohibited Uses</h2>
         <p>You agree not to:</p>
         <ul>
           <li>
@@ -73,14 +82,14 @@ const TermsOfUse = () => {
           <li>Use the Service for unauthorized commercial purposes.</li>
         </ul>
 
-        <h2>7. Termination</h2>
+        <h2>Termination</h2>
         <p>
           We may suspend or terminate your account if we believe you have
           violated these Terms. You may also terminate your account at any time
           by following the account termination procedure in the settings.
         </p>
 
-        <h2>8. Limitation of Liability</h2>
+        <h2>Limitation of Liability</h2>
         <p>
           Schedule Master is provided "as is" and we do not make any
           representations or warranties about the accuracy or reliability of the
@@ -88,14 +97,14 @@ const TermsOfUse = () => {
           consequential damages arising from your use of the Service.
         </p>
 
-        <h2>9. Changes to Terms</h2>
+        <h2>Changes to Terms</h2>
         <p>
           We may update these Terms from time to time. We will notify users of
           any significant changes. By continuing to use the Service, you accept
           the updated Terms.
         </p>
 
-        <h2>10. Contact Information</h2>
+        <h2>Contact Information</h2>
         <p>
           For any questions regarding these Terms, please contact us at:{" "}
           <strong>+267 XX XXX XXX</strong>

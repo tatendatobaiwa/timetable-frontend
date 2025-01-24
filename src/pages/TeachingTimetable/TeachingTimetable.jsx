@@ -18,7 +18,6 @@ const TeachingTimetable = () => {
     newModules[index][field] = value;
     setModules(newModules);
 
-    // Validate module code
     if (field === "code") {
       const newErrors = [...errors];
       if (!value) {

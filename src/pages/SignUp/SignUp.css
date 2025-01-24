@@ -1,0 +1,352 @@
+.signup-page,
+.signin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-content,
+.signin-content {
+  z-index: 2; 
+  text-align: center;
+}
+
+.signup-page h1,
+.signin-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+
+.signup-page form,
+.signin-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+}
+
+.signup-page input,
+.signin-page input {
+  padding: 0.8rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.signup-page button,
+.signin-page button {
+  padding: 0.8rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s var(--ease-out);
+}
+
+.signup-page button:hover,
+.signin-page button:hover {
+  background-color: #004f64;
+}
+
+.logoup {
+  height: 100px;
+}
+
+/* Blob Styles */
+.background-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  filter: blur(5px);
+  animation: float 20s infinite ease-in-out;
+  background: none;
+}
+
+.blob-1 {
+  top: 0%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  top: -10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.blob-3 {
+  bottom: -10%;
+  right: 0%;
+  animation-delay: 6s;
+}
+
+.blob-4 {
+  bottom: -20%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Back Button Styles */
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 3; 
+  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.back-button:hover {
+  background-color: #004f64;
+  color: white;
+}
+
+/* Responsive Styles for Back Button */
+@media (max-width: 768px) {
+  .back-button {
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoup {
+    height: 80px;
+  }
+
+  .back-button {
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Switch Page Text and Link Styles */
+.switch-page-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.switch-page-link {
+  color: var(--color-accent);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out);
+}
+
+.switch-page-link:hover {
+  color: #004f64;
+}
+
+/* Responsive Styles for Switch Page Text */
+@media (max-width: 768px) {
+  .switch-page-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .switch-page-text {
+    font-size: 0.7rem;
+  }
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+/* Responsive Styles for Error Messages */
+@media (max-width: 768px) {
+  .error-message {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .error-message {
+    font-size: 0.6rem;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .blob {
+    width: 600px;
+  }
+
+  .blob-1 {
+    top: -5%;
+    left: -15%;
+  }
+
+  .blob-2 {
+    top: 15%;
+    right: -20%;
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    right: -15%;
+  }
+
+  .blob-4 {
+    bottom: 0%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .blob {
+    width: 500px;
+  }
+
+  .blob-1 {
+    top: -5%;
+    left: -15%;
+  }
+
+  .blob-2 {
+    top: 15%;
+    right: -20%;
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    right: -15%;
+  }
+
+  .blob-4 {
+    bottom: 0%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blob {
+    width: 400px;
+  }
+
+  .blob-1 {
+    top: -5%;
+    left: -15%;
+  }
+
+  .blob-2 {
+    top: 15%;
+    right: -20%;
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    right: -15%;
+  }
+
+  .blob-4 {
+    bottom: 0%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .blob {
+    width: 275px;
+  }
+
+  .blob-1 {
+    top: -5%;
+    left: -15%;
+  }
+
+  .blob-2 {
+    top: 25%;
+    right: -20%;
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    right: -15%;
+  }
+
+  .blob-4 {
+    bottom: 10%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoup {
+    height: 60px;
+  }
+
+  .logo-container {
+    margin-bottom: 0;
+  }
+  
+  .blob {
+    width: 250px;
+  }
+
+  .blob-1 {
+    top: -5%;
+    left: -15%;
+  }
+
+  .blob-2 {
+    top: 25%;
+    right: -20%;
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    right: -15%;
+  }
+
+  .blob-4 {
+    bottom: 10%;
+    left: -20%;
+  }
+}

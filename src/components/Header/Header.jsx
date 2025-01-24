@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import darkmodelogo from "../../assets/schedulemasterlogo.png";
-import settingslogo from "../../assets/settingslogo.png";
 import minilogo from "../../assets/schedulemastermini.png";
 
 import "./Header.css";
@@ -47,7 +46,7 @@ const Header = () => {
             </button>
             <ul className={`nav-links ${isMenuActive ? "active" : ""}`}>
               <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
-                <a href="/">
+                <a href="/home">
                   <span>Home</span>
                 </a>
               </li>

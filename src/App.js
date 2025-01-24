@@ -8,6 +8,9 @@ import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import ExamTimetable from "./pages/ExamTimetable/ExamTimetable";
 import TeachingTimetable from "./pages/TeachingTimetable/TeachingTimetable";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import SignUp from "./pages/SignUp/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
 import "./App.css";
 
 function App() {
@@ -17,7 +20,10 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="/timetable-maker" element={<TimetableMaker />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />
             <Route path="/exam-timetable" element={<ExamTimetable />} />

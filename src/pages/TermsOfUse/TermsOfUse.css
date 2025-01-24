@@ -2,13 +2,15 @@
     background-color: #030303;
     color: white;
     padding: 2rem;
-    font-family: Poppins, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
     line-height: 1.6;
     text-align: left;
     align-items: center;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 8rem;
   }
+
   .terms-of-use-content {
     background-color: #1a1a1a;
     padding: 3rem;
@@ -16,6 +18,11 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 800px;
     width: 100%;
+    z-index: 1;
+  }
+
+  .terms-of-use-content h1{
+    color: #0092b9;
   }
   
   h2 {
@@ -23,6 +30,7 @@
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    color: #ff914c;
   }
   
   p {
