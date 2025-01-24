@@ -14,11 +14,11 @@ const Footer = () => {
           <h3 className="footer-heading">Get in touch</h3>
           <div className="contact-info">
             <div className="contact-item">
-              <MdEmail className="icon" size={24} /> {/* Mail icon */}
+              <MdEmail className="iconf" size={24} /> {/* Mail icon */}
               <span>biustinnovationclub&#64;gmail.com</span>
             </div>
             <div className="contact-item">
-              <MdCall className="icon" size={24} /> {/* Phone icon */}
+              <MdCall className="iconf" size={24} /> {/* Phone icon */}
               <span>+267 XX XXX XXX</span>
             </div>
           </div>
@@ -40,22 +40,22 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="footer-section">
-          <h3>Follow Us</h3>
+          <h3 className="footer-heading">Follow us</h3>
           <div className="social-icons">
             <a href="https://facebook.com" aria-label="Facebook">
-              <Facebook className="icon" />
+              <Facebook className="iconf" />
             </a>
             <a href="https://twitter.com" aria-label="Twitter">
-              <Twitter className="icon" />
+              <Twitter className="iconf" />
             </a>
             <a href="https://instagram.com" aria-label="Instagram">
-              <Instagram className="icon" />
+              <Instagram className="iconf" />
             </a>
             <a href="https://linkedin.com" aria-label="LinkedIn">
-              <Linkedin className="icon" />
+              <Linkedin className="iconf" />
             </a>
             <a href="https://github.com" aria-label="GitHub">
-              <Github className="icon" />
+              <Github className="iconf" />
             </a>
           </div>
         </div>
