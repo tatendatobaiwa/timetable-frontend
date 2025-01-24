@@ -80,7 +80,7 @@ function LandingPage() {
           </a>
         </div>
         <p className="rights-reserved">
-          &copy; {new Date().getFullYear()} MaintainMe. All rights reserved.
+          &copy; {new Date().getFullYear()} ScheduleMaster. All rights reserved.
         </p>
       </footer>
     </div>
