@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import darkmodelogo from "../../assets/schedulemasterlogo.png";
-import settingslogo from "../../assets/settingslogo.webp";
+import settingslogo from "../../assets/settingslogo.png";
 import minilogo from "../../assets/schedulemastermini.png";
 
 import "./Header.css";
