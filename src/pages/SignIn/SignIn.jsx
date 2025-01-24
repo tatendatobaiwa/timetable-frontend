@@ -1,21 +1,16 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import darkmodelogo from "../../assets/schedulemasterlogo.png";
 import './SignIn.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignIn: React.FC = () => {
+const SignIn = () => {
   const navigate = useNavigate();
-  const blobImages = [
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png',
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png',
-  ];
-
   const handleBackClick = () => {
     navigate('/');
   };
-
   const handleSignUpClick = () => {
     navigate('/signup');
   };
@@ -23,15 +18,27 @@ const SignIn: React.FC = () => {
   return (
     <div className="signin-page">
       {/* Background blobs */}
-      <div className="background-blobs">
-        {blobImages.map((blob, index) => (
-          <img
-            key={index}
-            src={blob}
-            alt={`Decorative blob ${index + 1}`}
-            className={`blob blob-${index + 1}`}
-          />
-        ))}
+      <div className="backgrounds-blobs">
+        <img
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 1"
+          className="blob blob-1"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 2"
+          className="blob blob-2"
+        />
+        <img
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 3"
+          className="blob blob-3"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 4"
+          className="blob blob-4"
+        />
       </div>
 
       {/* Back Button */}
@@ -39,12 +46,12 @@ const SignIn: React.FC = () => {
         Go Back
       </button>
         {/* Logo Placeholder */}
-        <div className="logo-container">
-          <img
-          src="/src/assets/logos/maintainme.png"
-          alt="MaintainMe Logo"
-          className="logoin"
-        />
+      <div className="logo-container">
+      <img
+                  src={darkmodelogo}
+                  alt="ScheduleMaster Logo"
+                  className="logoup"
+                />
       </div>
       {/* SignIn Content */}
       <div className="signin-content">

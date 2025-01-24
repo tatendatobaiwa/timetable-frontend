@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  font-family: var(--font-primary);
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
   position: relative;
   overflow: hidden;
+  padding-top: 6rem;
 }
 
 .signup-content,
@@ -22,7 +22,7 @@
 .signin-page h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--color-accent);
+  color: #0092b9;
 }
 
 .signup-page form,
@@ -36,23 +36,23 @@
 .signup-page input,
 .signin-page input {
   padding: 0.8rem;
-  border: 1px solid var(--color-accent);
+  border: 1px solid #0092b9;
   border-radius: 8px;
   background-color: transparent;
-  color: var(--color-primary);
+  color: #e7e7e7;
   font-size: 1rem;
 }
 
 .signup-page button,
 .signin-page button {
   padding: 0.8rem;
-  background-color: var(--color-accent);
+  background-color: #0092b9;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s var(--ease-out);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .signup-page button:hover,
@@ -60,7 +60,7 @@
   background-color: #004f64;
 }
 
-.logoin {
+.logoup {
   height: 100px;
 }
 
@@ -71,7 +71,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; 
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -124,13 +124,13 @@
   left: 1rem;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  border: 1px solid #0092b9;
+  color: white;
   border-radius: 8px;
   font-size: 0.9rem;
   cursor: pointer;
-  z-index: 3; /* Ensure button is above blobs and content */
-  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+  z-index: 3; 
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .back-button:hover {
@@ -165,18 +165,18 @@
 .switch-page-text {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--color-secondary);
+  color: #a1a1a1;
 }
 
 .switch-page-link {
-  color: var(--color-accent);
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.3s var(--ease-out);
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .switch-page-link:hover {
-  color: #004f64;
+  color: #0092b9;
 }
 
 /* Responsive Styles for Switch Page Text */
@@ -189,6 +189,27 @@
 @media (max-width: 576px) {
   .switch-page-text {
     font-size: 0.7rem;
+  }
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+/* Responsive Styles for Error Messages */
+@media (max-width: 768px) {
+  .error-message {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .error-message {
+    font-size: 0.6rem;
   }
 }
 
@@ -300,6 +321,7 @@
 @media (max-width: 400px) {
   .logoup {
     height: 60px;
+    margin-bottom: 20px;
   }
 
   .logo-container {

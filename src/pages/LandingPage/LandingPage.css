@@ -4,9 +4,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  font-family: var(--font-primary);
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -17,13 +16,13 @@
   z-index: 2; 
 }
 
-.logo {
+.logol {
   width: auto;
-  height: 150px;
+  height: 160px;
 }
 
 .landing-content {
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
   z-index: 2; 
 }
@@ -33,12 +32,12 @@
   font-weight: 600;
   letter-spacing: -0.022em;
   margin-bottom: 1.5rem;
-  color: var(--color-accent);
+  color: #0092b9;
 }
 
 .landing-subtitle {
   font-size: 1.4rem;
-  color: var(--color-secondary);
+  color: #666;
   margin-bottom: 3rem;
 }
 
@@ -56,18 +55,18 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .landing-button.sign-up {
-  background-color: var(--color-accent);
+  background-color: #0092b9;
   color: white;
 }
 
 .landing-button.sign-in {
   background-color: transparent;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  border: 1px solid #0092b9;
+  color: #0092b9;
 }
 
 .landing-button.sign-up:hover {
@@ -95,18 +94,18 @@
 }
 
 .social-links a {
-  color: var(--color-primary);
+  color: #dddddd;
   font-size: 1.5rem;
-  transition: color 0.3s var(--ease-out);
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .social-links a:hover {
-  color: var(--color-accent);
+  color: #0092b9;
 }
 
 .rights-reserved {
   font-size: 0.9rem;
-  color: var(--color-secondary);
+  color: #666;
 }
 
 /* Blob Styles */
@@ -164,7 +163,7 @@
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .logo {
+  .logol {
     height: 120px;
   }
 
@@ -202,7 +201,7 @@
 }
 
 @media (max-width: 992px) {
-  .logo {
+  .logol {
     height: 100px;
   }
 
@@ -249,7 +248,7 @@
 }
 
 @media (max-width: 768px) {
-  .logo {
+  .logol {
     height: 80px;
   }
 
@@ -308,7 +307,7 @@
 }
 
 @media (max-width: 576px) {
-  .logo {
+  .logol {
     height: 60px;
   }
 
@@ -367,7 +366,7 @@
 }
 
 @media (max-width: 400px) {
-  .logo {
+  .logol {
     height: 50px;
   }
 

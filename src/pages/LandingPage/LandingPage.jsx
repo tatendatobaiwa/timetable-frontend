@@ -1,9 +1,12 @@
 import React from 'react';
 import './LandingPage.css';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import darkmodelogo from "../../assets/schedulemasterlogo.png";
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
 import { useNavigate } from 'react-router-dom';
 
-const LandingPage: React.FC = () => {
+function LandingPage() {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
@@ -14,36 +17,39 @@ const LandingPage: React.FC = () => {
     navigate('/signin');
   };
 
-  const blobImages = [
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png',
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png'
-  ];
-
   return (
     <div className="landing-page">
       {/* Background blobs */}
-      <div className="background-blobs">
-        {blobImages.map((blob, index) => (
-          <img
-            key={index}
-            src={blob}
-            alt={`Decorative blob ${index + 1}`}
-            className={`blob blob-${index + 1}`}
-          />
-        ))}
-      </div>
-      {/* Logo Placeholder */}
-      <div className="logo-container">
+      <div className="backgrounds-blobs">
         <img
-          src="/src/assets/logos/maintainme.png"
-          alt="MaintainMe Logo"
-          className="logo"
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 1"
+          className="blob blob-1"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 2"
+          className="blob blob-2"
+        />
+        <img
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 3"
+          className="blob blob-3"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 4"
+          className="blob blob-4"
         />
       </div>
+      <div className="logo-container">
+      <img
+                  src={darkmodelogo}
+                  alt="ScheduleMaster Logo"
+                  className="logol"
+                />
+      </div>
 
-      {/* Main Content */}
       <div className="landing-content">
         <div className="landing-buttons">
           <button className="landing-button sign-up" onClick={handleSignUpClick}>
@@ -55,9 +61,8 @@ const LandingPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="landing-footer">
-      <div className="social-links">
+        <div className="social-links">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Facebook className="icon" />
           </a>
@@ -80,6 +85,6 @@ const LandingPage: React.FC = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default LandingPage;

@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import darkmodelogo from "../../assets/schedulemasterlogo.png";
 import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignUp: React.FC = () => {
+const SignUp = () => {
   const navigate = useNavigate();
-  const blobImages = [
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png',
-    '/src/assets/blobs/blob1.png',
-    '/src/assets/blobs/blob2.png',
-  ];
-
   const [studentId, setStudentId] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -29,7 +25,7 @@ const SignUp: React.FC = () => {
     navigate('/signin');
   };
 
-  const validateStudentId = (id: string): boolean => {
+  const validateStudentId = (id) => {
     if (id.length !== 8) {
       setErrors((prev) => ({
         ...prev,
@@ -51,7 +47,7 @@ const SignUp: React.FC = () => {
     return true;
   };
 
-  const validatePassword = (password: string): boolean => {
+  const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
       setErrors((prev) => ({
@@ -66,7 +62,7 @@ const SignUp: React.FC = () => {
     return true;
   };
 
-  const validateConfirmPassword = (confirmPassword: string): boolean => {
+  const validateConfirmPassword = (confirmPassword) => {
     if (confirmPassword !== password) {
       setErrors((prev) => ({
         ...prev,
@@ -79,7 +75,7 @@ const SignUp: React.FC = () => {
     return true;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const isStudentIdValid = validateStudentId(studentId);
@@ -94,15 +90,27 @@ const SignUp: React.FC = () => {
   return (
     <div className="signup-page">
       {/* Background blobs */}
-      <div className="background-blobs">
-        {blobImages.map((blob, index) => (
-          <img
-            key={index}
-            src={blob}
-            alt={`Decorative blob ${index + 1}`}
-            className={`blob blob-${index + 1}`}
-          />
-        ))}
+      <div className="backgrounds-blobs">
+        <img
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 1"
+          className="blob blob-1"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 2"
+          className="blob blob-2"
+        />
+        <img
+          src={blob1} // Use imported blob1
+          alt="Decorative blob 3"
+          className="blob blob-3"
+        />
+        <img
+          src={blob2} // Use imported blob2
+          alt="Decorative blob 4"
+          className="blob blob-4"
+        />
       </div>
 
       {/* Back Button */}
@@ -112,11 +120,11 @@ const SignUp: React.FC = () => {
 
       {/* Logo Placeholder */}
       <div className="logo-container">
-        <img
-          src="/src/assets/logos/maintainme.png"
-          alt="MaintainMe Logo"
-          className="logoup"
-        />
+      <img
+                  src={darkmodelogo}
+                  alt="ScheduleMaster Logo"
+                  className="logoup"
+                />
       </div>
 
       {/* SignUp Content */}
