@@ -48,6 +48,7 @@ nav {
 
 .nav-item a span {
   white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
 }
 
 .nav-links li {
