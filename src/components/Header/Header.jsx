@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import darkmodelogo from '../../assets/darkmodelogo.webp';
-import settingslogo from '../../assets/settingslogo.webp';
-import minilogo from '../../assets/schedulemasterminilogo.webp';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import darkmodelogo from "../../assets/schedulemasterlogo.png";
+import settingslogo from "../../assets/settingslogo.webp";
+import minilogo from "../../assets/schedulemastermini.png";
 
-import './Header.css';
+import "./Header.css";
 const Header = () => {
   const [isMenuActive, setMenuActive] = useState(false);
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
-    navigate('');
+    navigate("");
   };
 
   const toggleMenu = () => {
@@ -25,9 +25,17 @@ const Header = () => {
             <div>
               <button
                 onClick={handleLogoClick}
-                style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                }}
               >
-                <img src={darkmodelogo} alt="ScheduleMaster Logo" className="logo" />
+                <img
+                  src={darkmodelogo}
+                  alt="ScheduleMaster Logo"
+                  className="logo"
+                />
               </button>
             </div>
             <button
@@ -37,16 +45,28 @@ const Header = () => {
             >
               ☰
             </button>
-            <ul className={`nav-links ${isMenuActive ? 'active' : ''}`}>
-              <li className={`nav-item ${isMenuActive ? 'visible' : ''}`}>
+            <ul className={`nav-links ${isMenuActive ? "active" : ""}`}>
+              <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
                 <a href="/timetable-maker">
-                  <img src={minilogo} alt="Mini Logo" className="mini-logo" height="35" width="35" />
+                  <img
+                    src={minilogo}
+                    alt="Mini Logo"
+                    className="mini-logo"
+                    height="35"
+                    width="35"
+                  />
                   <span>Make Your Timetable</span>
                 </a>
               </li>
-              <li className={`nav-item ${isMenuActive ? 'visible' : ''}`}>
+              <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
                 <a href="/settings">
-                  <img src={settingslogo} alt="Settings-Icon" className="settings-icon" height="35" width="35" />
+                  <img
+                    src={settingslogo}
+                    alt="Settings-Icon"
+                    className="settings-icon"
+                    height="35"
+                    width="35"
+                  />
                   <span>Settings</span>
                 </a>
               </li>

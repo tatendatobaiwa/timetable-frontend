@@ -40,14 +40,14 @@ nav {
   margin: 0;
   padding: 0;
   gap: 2rem;
-  opacity: 1; 
-  transform: none; 
-  transition: transform 0.3s ease, opacity 0.3s ease; 
+  opacity: 1;
+  transform: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   white-space: nowrap;
 }
 
 .nav-item a span {
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .nav-links li {
@@ -65,12 +65,12 @@ nav {
   gap: 0.5rem;
   padding: 1rem;
   background: none;
-  border-radius: 4px; 
-  transition: background 0.3s ease; 
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 .nav-links li a:hover {
-  background: rgba(244, 188, 42, 0.1); 
+  background: rgba(0, 153, 255, 0.1);
 }
 
 .mini-logo {
@@ -82,18 +82,18 @@ nav {
 }
 
 .settings-icon {
-  display: none; 
+  display: none;
 }
 
 .settings-icon.visible {
-  display: inline-block; 
+  display: inline-block;
 }
 
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
   background: none;
-  color: #F4BC2A;
+  color: #0092b9;
   border: none;
   cursor: pointer;
 }
@@ -122,17 +122,17 @@ nav {
     right: 0;
     width: 100%;
     background-color: #030303;
-    text-align: center; 
+    text-align: center;
     gap: 1rem;
-    opacity: 0; 
+    opacity: 0;
     transform: translateY(-20px);
-    pointer-events: none; 
-    transition: transform 0.3s ease, opacity 0.3s ease; 
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .nav-links.active {
-    opacity: 1; 
-    transform: translateY(0); 
+    opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
   }
 
