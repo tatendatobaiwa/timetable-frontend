@@ -1,75 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mailIcon from "../../assets/mail.webp";
-import phoneIcon from "../../assets/call.webp";
-import linkedinIcon from "../../assets/linkedin.webp";
-import biclogo from "../../assets/biclogo.webp";
-import './Footer.css';
+import { MdEmail, MdCall } from "react-icons/md";
+import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-wrapper">
-            {/* Contact Information */}
-            <div className="footer-column">
-              <h4 className="footer-heading">Get in touch</h4>
-              <div className="contact-info">
-                <div className="contact-item">
-                  <img src={mailIcon} alt="Mail Icon" className="icon" height="30" width="30" />
-                  <span>biustinnovationclub&#64;gmail.com</span>
-                </div>
-                <div className="contact-item">
-                  <img src={phoneIcon} alt="Phone Icon" className="icon" height="30" width="30" />
-                  <span>+267 XX XXX XXX</span>
-                </div>
-              </div>
+    <footer className="footer">
+      <div className="footer-content">
+        {/* Contact Information */}
+        <div className="footer-section">
+          <h3 className="footer-heading">Get in touch</h3>
+          <div className="contact-info">
+            <div className="contact-item">
+              <MdEmail className="icon" size={24} /> {/* Mail icon */}
+              <span>biustinnovationclub&#64;gmail.com</span>
             </div>
-            {/* Office Locations */}
-            <div className="footer-column">
-              <h4 className="footer-heading">Location</h4>
-              <div className="offices-info">
-                <p>
-                  BIUST Campus
-                  <br />
-                  Palapye
-                  <br />
-                  Botswana
-                </p>
-              </div>
-            </div>
-            {/* Social Media Links */}
-            <div className="footer-column">
-              <h4 className="footer-heading">Follow us</h4>
-              <ul className="social-icons">
-                <li>
-                  <a 
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <img src={linkedinIcon} alt="LinkedIn logo" height="30" width="30" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-column">
-              <ul className="bic-logo">
-                    <img src={biclogo} alt="Bic logo"/>
-              </ul>
+            <div className="contact-item">
+              <MdCall className="icon" size={24} /> {/* Phone icon */}
+              <span>+267 XX XXX XXX</span>
             </div>
           </div>
+        </div>
 
-          {/* Footer Bottom */}
-          <div className="footer-bottom">
+        {/* Office Locations */}
+        <div className="footer-section">
+          <h3 className="footer-heading">Location</h3>
+          <div className="offices-info">
             <p>
-              © 2024 BIUST Innovation Club. All Rights Reserved | {" "}
-              <Link to="/terms-of-use">Terms of Use</Link>
+              BIUST Campus
+              <br />
+              Palapye
+              <br />
+              Botswana
             </p>
           </div>
         </div>
+
+        {/* Social Media Links */}
+        <div className="footer-section">
+          <h3>Follow Us</h3>
+          <div className="social-icons">
+            <a href="https://facebook.com" aria-label="Facebook">
+              <Facebook className="icon" />
+            </a>
+            <a href="https://twitter.com" aria-label="Twitter">
+              <Twitter className="icon" />
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram">
+              <Instagram className="icon" />
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">
+              <Linkedin className="icon" />
+            </a>
+            <a href="https://github.com" aria-label="GitHub">
+              <Github className="icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <p>
+          © 2024 BIUST Innovation Club. All Rights Reserved |{" "}
+          <Link to="/terms-of-use">Terms of Use</Link>
+        </p>
       </div>
     </footer>
   );
