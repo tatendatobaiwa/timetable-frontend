@@ -47,6 +47,11 @@ const Header = () => {
             </button>
             <ul className={`nav-links ${isMenuActive ? "active" : ""}`}>
               <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
+                <a href="/">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li className={`nav-item ${isMenuActive ? "visible" : ""}`}>
                 <a href="/timetable-maker">
                   <img
                     src={minilogo}
