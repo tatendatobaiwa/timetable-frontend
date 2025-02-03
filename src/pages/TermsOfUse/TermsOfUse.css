@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 8rem;
+    position: relative;
+    overflow: hidden;
   }
 
   .terms-of-use-content {
