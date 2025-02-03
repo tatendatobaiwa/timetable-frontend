@@ -22,6 +22,7 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  margin-top: 6rem;
 }
 
 .teaching-timetable-title {
@@ -140,11 +141,5 @@
 @media (min-width: 768px) {
   .module-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .teaching-timetable-card {
-    margin-top: 6rem;
   }
 }
