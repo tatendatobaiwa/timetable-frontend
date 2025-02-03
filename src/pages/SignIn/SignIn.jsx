@@ -156,7 +156,7 @@ const SignIn = () => {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="icon" />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/INNOVATION-CLUB-BIUST" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <Github className="icon" />
           </a>
         </div>

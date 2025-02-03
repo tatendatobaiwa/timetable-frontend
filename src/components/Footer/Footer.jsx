@@ -54,7 +54,7 @@ const Footer = () => {
             <a href="https://linkedin.com" aria-label="LinkedIn">
               <Linkedin className="iconf" />
             </a>
-            <a href="https://github.com" aria-label="GitHub">
+            <a href="https://github.com/INNOVATION-CLUB-BIUST" aria-label="GitHub">
               <Github className="iconf" />
             </a>
           </div>

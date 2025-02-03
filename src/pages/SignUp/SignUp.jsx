@@ -211,7 +211,7 @@ const SignUp = () => {
             <Linkedin className="icon" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/INNOVATION-CLUB-BIUST"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
