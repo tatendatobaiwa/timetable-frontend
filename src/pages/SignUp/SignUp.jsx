@@ -129,7 +129,6 @@ const SignUp = () => {
 
       {/* SignUp Content */}
       <div className="signup-content">
-        <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
           {/* Student ID Input */}
           <input

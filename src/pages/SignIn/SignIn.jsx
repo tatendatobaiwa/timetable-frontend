@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import blob1 from "../../assets/blob1.png";
 import blob2 from "../../assets/blob2.png";
@@ -8,12 +8,68 @@ import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const [studentId, setStudentId] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({
+    studentId: '',
+    password: '',
+    confirmPassword: '',
+  });
   const handleBackClick = () => {
     navigate('/');
   };
   const handleSignUpClick = () => {
     navigate('/signup');
   };
+  
+
+  const validateStudentId = (id) => {
+    if (id.length !== 8) {
+      setErrors((prev) => ({
+        ...prev,
+        studentId: 'Student ID must be exactly 8 characters long.',
+      }));
+      return false;
+    }
+
+    const firstTwoDigits = parseInt(id.substring(0, 2), 10);
+    if (isNaN(firstTwoDigits) || firstTwoDigits < 11 || firstTwoDigits > 24) {
+      setErrors((prev) => ({
+        ...prev,
+        studentId: 'The first 2 digits must be between 11 and 24.',
+      }));
+      return false;
+    }
+
+    setErrors((prev) => ({ ...prev, studentId: '' }));
+    return true;
+  };
+
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      setErrors((prev) => ({
+        ...prev,
+        password:
+          'Password must contain at least one letter, one number, and one special character.',
+      }));
+      return false;
+    }
+
+    setErrors((prev) => ({ ...prev, password: '' }));
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const isStudentIdValid = validateStudentId(studentId);
+    const isPasswordValid = validatePassword(password);
+
+    if (isStudentIdValid && isPasswordValid) {
+      console.log('Form submitted successfully!');
+    }
+  }; 
 
   return (
     <div className="signin-page">
@@ -55,10 +111,27 @@ const SignIn = () => {
       </div>
       {/* SignIn Content */}
       <div className="signin-content">
-        <h1>Sign In</h1>
-        <form>
-          <input type="text" placeholder="Student ID" />
-          <input type="password" placeholder="Password" />
+        <form onSubmit={handleSubmit}>
+          {/* Student ID Input */}
+          <input
+            type="text"
+            placeholder="Student ID"
+            value={studentId}
+            onChange={(e) => setStudentId(e.target.value)}
+            onBlur={() => validateStudentId(studentId)}
+          />
+          {errors.studentId && <p className="error-message">{errors.studentId}</p>}
+
+          {/* Password Input */}
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onBlur={() => validatePassword(password)}
+          />
+          {errors.password && <p className="error-message">{errors.password}</p>}
+          {/* Submit Button */}
           <button type="submit">Sign In</button>
         </form>
         <p className="switch-page-text">
