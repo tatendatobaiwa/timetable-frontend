@@ -174,7 +174,7 @@
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .logoh {
-    height: 120px;
+    height: 160px;
   }
 
   .blob {
@@ -204,7 +204,7 @@
 
 @media (max-width: 992px) {
   .logoh {
-    height: 100px;
+    height: 125px;
   }
 
   .blob {
@@ -238,7 +238,7 @@
   }
 
   .logoh {
-    height: 80px;
+    height: 120px;
   }
 
   .blob {
@@ -268,7 +268,7 @@
 
 @media (max-width: 576px) {
   .logoh {
-    height: 60px;
+    height: 85px;
   }
 
   .blob {
@@ -298,7 +298,8 @@
 
 @media (max-width: 400px) {
   .logoh {
-    height: 50px;
+    height: 150px;
+    margin-bottom: 2rem;
   }
 
   .blob {

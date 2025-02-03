@@ -75,7 +75,6 @@ const Home = () => {
       <div className="quick-links">
         <div
           className="link-card"
-          onClick={() => navigate("/select-modules")} // Navigate to module selection
         >
           <FiList className="link-icon" />
           <h3>Select Modules</h3>
@@ -85,7 +84,6 @@ const Home = () => {
         </div>
         <div
           className="link-card"
-          onClick={() => navigate("/view-timetable")} // Navigate to view timetable
         >
           <FiCalendar className="link-icon" />
           <h3>View Timetable</h3>
@@ -93,7 +91,6 @@ const Home = () => {
         </div>
         <div
           className="link-card"
-          onClick={() => navigate("/manage-schedule")} // Navigate to manage schedule
         >
           <FiSettings className="link-icon" />
           <h3>Manage Schedule</h3>
